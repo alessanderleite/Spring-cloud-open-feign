@@ -11,6 +11,6 @@ import br.com.alessanderleite.model.TodoModel;
 @FeignClient(name = "TodoClient", url="https://jsonplaceholder.typicode.com")
 public interface TodoClient {
 	
-	@GetMapping(value = "/todos", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/todos", produces = MediaType.APPLICATION_JSON_VALUE)
 	List<TodoModel> getTodos();
 }
